@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon --inspect src/index.js",
     "watch": "node-sass --watch src/resource/scss/ -o src/public/css/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -25,13 +26,9 @@
     "url": "https://github.com/JamieD29/NodeJs_Blog/issues"
   },
   "homepage": "https://github.com/JamieD29/NodeJs_Blog#readme",
-  "lint-staged":{
-    "src/**/*.{js,json,scss}" : "prettier --single-quote --trailing-comma all --write"
-  },
-  "husky":{
-    "hooks":{
-      "pre-commit": "lint-staged"
-    }
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --write",
+    "*.{js,css,md}": "prettier --write"
   },
   "dependencies": {
     "express": "^4.18.2"
