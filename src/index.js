@@ -7,11 +7,11 @@ const app = express();
 const port = 3002;
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.urlencoded({ extended: 'true' }));
-app.use(express.json());
+                app.use(express.urlencoded({ extended: 'true' }));
+      app.use(express.json());
 
 //HTTP logger
-   app.use(morgan('combined'));
+    app.use(morgan('combined'));
 
 //Template engine
  app.engine(
