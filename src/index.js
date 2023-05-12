@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
     extname: '.hbs',
   }),
 );
-                       app.set('view engine', '.hbs');
+                  app.set('view engine', '.hbs');
     app.set('views', path.join(__dirname, 'resource', 'views'));
 
 router(app);
